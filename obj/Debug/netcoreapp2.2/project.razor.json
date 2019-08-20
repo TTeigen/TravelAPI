@@ -1,5 +1,5 @@
 {
-  "FilePath": "/Users/Guest/Desktop/TravelAPI/Travel.csproj",
+  "FilePath": "/Users/Guest/Desktop/TravelAPI/TravelAPI.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-2.1",
     "LanguageVersion": "2.1",
@@ -2940,7 +2940,7 @@
     ],
     "CSharpLanguageVersion": 703
   },
-  "RootNamespace": "Travel",
+  "RootNamespace": "TravelAPI",
   "Documents": [],
   "SerializationFormat": "0.1"
 }

@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace Travel.Migrations
+namespace TravelAPI.Migrations
 {
     public partial class Initial : Migration
     {
@@ -13,9 +13,9 @@ namespace Travel.Migrations
                 {
                     DestinationId = table.Column<int>(nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    Name = table.Column<string>(nullable: true),
-                    City = table.Column<string>(nullable: true),
-                    Country = table.Column<string>(nullable: true),
+                    Name = table.Column<string>(nullable: false),
+                    City = table.Column<string>(nullable: false),
+                    Country = table.Column<string>(nullable: false),
                     AvgRating = table.Column<double>(nullable: false)
                 },
                 constraints: table =>
@@ -30,8 +30,8 @@ namespace Travel.Migrations
                     ReviewId = table.Column<int>(nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     DestinationId = table.Column<int>(nullable: false),
-                    ReviewText = table.Column<string>(nullable: true),
-                    Author = table.Column<string>(nullable: true),
+                    ReviewText = table.Column<string>(nullable: false),
+                    Author = table.Column<string>(nullable: false),
                     Rating = table.Column<int>(nullable: false)
                 },
                 constraints: table =>

@@ -9,8 +9,11 @@ namespace TravelAPI.Models
         [Key]
         public int ReviewId { get; set; }
         public int DestinationId { get; set; }
+        [Required]
         public string ReviewText { get; set; }
+        [Required]
         public string Author { get; set; }
+        [Range(0,10)]
         public int Rating { get; set; }
     }
 }

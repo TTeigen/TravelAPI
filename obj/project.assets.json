@@ -12161,9 +12161,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/Guest/Desktop/TravelAPI/Travel.csproj",
-      "projectName": "Travel",
-      "projectPath": "/Users/Guest/Desktop/TravelAPI/Travel.csproj",
+      "projectUniqueName": "/Users/Guest/Desktop/TravelAPI/TravelAPI.csproj",
+      "projectName": "TravelAPI",
+      "projectPath": "/Users/Guest/Desktop/TravelAPI/TravelAPI.csproj",
       "packagesPath": "/Users/Guest/.nuget/packages/",
       "outputPath": "/Users/Guest/Desktop/TravelAPI/obj/",
       "projectStyle": "PackageReference",

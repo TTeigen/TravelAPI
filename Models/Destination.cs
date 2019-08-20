@@ -15,9 +15,13 @@ namespace TravelAPI.Models
         }
         [Key]
         public int DestinationId { get; set; }
+        [Required]
         public string Name { get; set; }
+        [Required]
         public string City { get; set; }
+        [Required]
         public string Country { get; set; }
+        [Range(0,11)]
         public double AvgRating { get; set; }
         
         

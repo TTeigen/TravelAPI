@@ -5,10 +5,10 @@ using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TravelAPI.Models;
 
-namespace Travel.Migrations
+namespace TravelAPI.Migrations
 {
     [DbContext(typeof(TravelAPIContext))]
-    [Migration("20190820164051_Initial")]
+    [Migration("20190820211939_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -25,11 +25,14 @@ namespace Travel.Migrations
 
                     b.Property<double>("AvgRating");
 
-                    b.Property<string>("City");
+                    b.Property<string>("City")
+                        .IsRequired();
 
-                    b.Property<string>("Country");
+                    b.Property<string>("Country")
+                        .IsRequired();
 
-                    b.Property<string>("Name");
+                    b.Property<string>("Name")
+                        .IsRequired();
 
                     b.HasKey("DestinationId");
 
@@ -41,13 +44,15 @@ namespace Travel.Migrations
                     b.Property<int>("ReviewId")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<string>("Author");
+                    b.Property<string>("Author")
+                        .IsRequired();
 
                     b.Property<int>("DestinationId");
 
                     b.Property<int>("Rating");
 
-                    b.Property<string>("ReviewText");
+                    b.Property<string>("ReviewText")
+                        .IsRequired();
 
                     b.HasKey("ReviewId");
 
