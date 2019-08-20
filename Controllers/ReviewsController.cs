@@ -48,6 +48,11 @@ namespace TravelAPI.Controllers
             review.ReviewId = id;
             _db.Entry(review).State = EntityState.Modified;
             _db.SaveChanges();
+            var thisDestination = _db.Destinations
+                .Include(destination => destination.Reviews)
+                .FirstOrDefault(x=> x.DestinationId == review.DestinationId);
+            thisDestination.GetAvgRating();
+            _db.SaveChanges();
         }
 
         // DELETE api/reviews/1
@@ -56,6 +61,11 @@ namespace TravelAPI.Controllers
         {
             var thisReview = _db.Reviews.FirstOrDefault(x => x.ReviewId == id);
             _db.Reviews.Remove(thisReview);
+            _db.SaveChanges();
+            var thisDestination = _db.Destinations
+                .Include(destination => destination.Reviews)
+                .FirstOrDefault(x=> x.DestinationId == thisReview.DestinationId);
+            thisDestination.GetAvgRating();
             _db.SaveChanges();
         }
     }

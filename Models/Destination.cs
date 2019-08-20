@@ -29,8 +29,8 @@ namespace TravelAPI.Models
             foreach (Review review in Reviews)
             {
                 sum += review.Rating;
+                Console.WriteLine(sum);
             }
-            Console.WriteLine("Reviews Count: " + Reviews.Count);
             AvgRating = sum / Reviews.Count;
         }
     }

@@ -36,8 +36,8 @@ namespace TravelAPI.Controllers
         public ActionResult<Destination> Get(int id)
         {
             return _db.Destinations
-                .Include(destinations => destinations.Reviews)
-                .FirstOrDefault(x => x.DestinationId == id);
+            .Include(destinations => destinations.Reviews)
+            .FirstOrDefault(x => x.DestinationId == id);
         }
 
         // PUT api/destinations/1
