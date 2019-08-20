@@ -1,0 +1,14 @@
+/Users/Guest/Desktop/TravelAPI/bin/Debug/netcoreapp2.2/Travel.deps.json
+/Users/Guest/Desktop/TravelAPI/bin/Debug/netcoreapp2.2/Travel.runtimeconfig.json
+/Users/Guest/Desktop/TravelAPI/bin/Debug/netcoreapp2.2/Travel.runtimeconfig.dev.json
+/Users/Guest/Desktop/TravelAPI/bin/Debug/netcoreapp2.2/Travel.dll
+/Users/Guest/Desktop/TravelAPI/bin/Debug/netcoreapp2.2/Travel.pdb
+/Users/Guest/Desktop/TravelAPI/obj/Debug/netcoreapp2.2/Travel.csprojAssemblyReference.cache
+/Users/Guest/Desktop/TravelAPI/obj/Debug/netcoreapp2.2/Travel.csproj.CoreCompileInputs.cache
+/Users/Guest/Desktop/TravelAPI/obj/Debug/netcoreapp2.2/Travel.RazorAssemblyInfo.cache
+/Users/Guest/Desktop/TravelAPI/obj/Debug/netcoreapp2.2/Travel.RazorAssemblyInfo.cs
+/Users/Guest/Desktop/TravelAPI/obj/Debug/netcoreapp2.2/Travel.AssemblyInfoInputs.cache
+/Users/Guest/Desktop/TravelAPI/obj/Debug/netcoreapp2.2/Travel.AssemblyInfo.cs
+/Users/Guest/Desktop/TravelAPI/obj/Debug/netcoreapp2.2/Travel.RazorTargetAssemblyInfo.cache
+/Users/Guest/Desktop/TravelAPI/obj/Debug/netcoreapp2.2/Travel.dll
+/Users/Guest/Desktop/TravelAPI/obj/Debug/netcoreapp2.2/Travel.pdb

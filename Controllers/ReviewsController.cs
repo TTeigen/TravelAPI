@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Travel.Models;
+using TravelAPI.Models;
 
-namespace Travel.Controllers
+namespace TravelAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
     public class ReviewsController : ControllerBase
     {
-        private TravelContext _db = new TravelContext();
+        private TravelAPIContext _db = new TravelAPIContext();
 
         // GET api/reviews
         [HttpGet]
@@ -27,8 +27,8 @@ namespace Travel.Controllers
         public void Post([FromBody] Review review)
         {
             _db.Reviews.Add(review);
-            Console.WriteLine("review added");
             var thisDestination = _db.Destinations
+                .Include(destination => destination.Reviews)
                 .FirstOrDefault(x => x.DestinationId == review.DestinationId);
             thisDestination.GetAvgRating();
             _db.SaveChanges();

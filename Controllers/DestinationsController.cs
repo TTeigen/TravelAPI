@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Travel.Models;
+using TravelAPI.Models;
 
-namespace Travel.Controllers
+namespace TravelAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
     public class DestinationsController : ControllerBase
     {
-        private TravelContext _db = new TravelContext();
+        private TravelAPIContext _db = new TravelAPIContext();
 
         // GET api/destinations
         [HttpGet]
@@ -23,11 +23,11 @@ namespace Travel.Controllers
                 .ToList();
         }
 
-        // POST api/destinations
+        //POST api/destinations
         [HttpPost]
         public void Post([FromBody] Destination destination)
         {
-            _db.Destinations.Add(destination);
+            _db.Destinations.Add(destination);  
             _db.SaveChanges();
         }
 
@@ -35,7 +35,9 @@ namespace Travel.Controllers
         [HttpGet("{id}")]
         public ActionResult<Destination> Get(int id)
         {
-            return _db.Destinations.FirstOrDefault(x => x.DestinationId == id);
+            return _db.Destinations
+                .Include(destinations => destinations.Reviews)
+                .FirstOrDefault(x => x.DestinationId == id);
         }
 
         // PUT api/destinations/1
@@ -56,7 +58,7 @@ namespace Travel.Controllers
             _db.SaveChanges();
         }
         
-        // get destination name by country name
+        //GET destinations by country
         [HttpGet("country/{country}")]
         public ActionResult<IEnumerable<Destination>> Get (string country)
         {

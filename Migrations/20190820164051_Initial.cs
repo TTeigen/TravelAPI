@@ -14,8 +14,9 @@ namespace Travel.Migrations
                     DestinationId = table.Column<int>(nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     Name = table.Column<string>(nullable: true),
+                    City = table.Column<string>(nullable: true),
                     Country = table.Column<string>(nullable: true),
-                    City = table.Column<string>(nullable: true)
+                    AvgRating = table.Column<double>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -28,10 +29,10 @@ namespace Travel.Migrations
                 {
                     ReviewId = table.Column<int>(nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    UserName = table.Column<string>(nullable: true),
-                    Rating = table.Column<int>(nullable: false),
+                    DestinationId = table.Column<int>(nullable: false),
                     ReviewText = table.Column<string>(nullable: true),
-                    DestinationId = table.Column<int>(nullable: true)
+                    Author = table.Column<string>(nullable: true),
+                    Rating = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -41,7 +42,7 @@ namespace Travel.Migrations
                         column: x => x.DestinationId,
                         principalTable: "destinations",
                         principalColumn: "DestinationId",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(

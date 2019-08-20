@@ -1,7 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Travel.Models
+namespace TravelAPI.Models
 {
     [Table("reviews")]
     public class Review
@@ -9,10 +9,8 @@ namespace Travel.Models
         [Key]
         public int ReviewId { get; set; }
         public int DestinationId { get; set; }
-        public string UserName { get; set; }
-        public int Rating { get; set; }
         public string ReviewText { get; set; }
-        
-        public virtual Destination Destination { get; set; }
+        public string Author { get; set; }
+        public int Rating { get; set; }
     }
 }

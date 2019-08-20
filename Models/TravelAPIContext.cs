@@ -1,21 +1,21 @@
 using Microsoft.EntityFrameworkCore;
 
-namespace Travel.Models
+namespace TravelAPI.Models
 {
-    public class TravelContext : DbContext
+    public class TravelAPIContext : DbContext
     {
         public DbSet<Destination> Destinations { get; set; }
         public DbSet<Review> Reviews { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
             => optionsBuilder
-                .UseMySql(@"server=localhost;user id=root;password=epicodus;port=3306;database=travel;");
+                .UseMySql(@"server=localhost;userid=root;password=epicodus;port=3306;database=TravelAPI;");
 
-        public TravelContext(DbContextOptions options) : base(options)
+        public TravelAPIContext(DbContextOptions options) : base(options)
         {
 
         }
-        public TravelContext()
+        public TravelAPIContext()
         {
 
         }
