@@ -2,7 +2,7 @@
 
 #### _API for reviewing travel destinations, 8/20/2019_
 
-#### _By **Trevor Teigen & Marqis Ramos**_
+#### _By **Trevor Teigen**_
 
 ## Description
 
